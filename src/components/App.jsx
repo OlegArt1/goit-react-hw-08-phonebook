@@ -25,6 +25,9 @@ export const App = () =>
 
     const { isRefreshing } = useSelector(state => state.auth);
 
+    const loaderHeight = (window.innerHeight - 80) / 2;
+    const loaderWidth = (window.innerWidth - 80) / 2;
+
     return !isRefreshing ?
     <>
         <Routes>
@@ -39,6 +42,8 @@ export const App = () =>
         <GlobalStyle/>
     </>
     :
-    <Vortex visible={true} height="80" width="80" ariaLabel="vortex-loading" wrapperStyle={{}}
-            wrapperClass="vortex-wrapper" colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}/>;
+    <div style={{ marginTop: loaderHeight, marginLeft: loaderWidth }}>
+        <Vortex visible={true} height="80" width="80" ariaLabel="vortex-loading" wrapperStyle={{}}
+                wrapperClass="vortex-wrapper" colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}/>;
+    </div>
 };

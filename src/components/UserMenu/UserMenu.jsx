@@ -15,7 +15,7 @@ export const UserMenu = () =>
             <p className={Css.user_menu__email_block}>{email}</p>
             <button className={Css.user_menu__button} type="primary" onClick={() => dispatch(logOut())}>
                 <span className={Css.user_menu__button_text}>Log out</span>
-            </button>{' '}
+            </button>
         </div>
     );
 };

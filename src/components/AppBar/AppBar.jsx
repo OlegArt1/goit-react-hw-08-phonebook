@@ -6,14 +6,20 @@ import Css from "./AppBar.module.css";
 
 export const AppBar = () =>
 {
+    const loaderHeight = (window.innerHeight - 80) / 2;
+    const loaderWidth = (window.innerWidth - 80) / 2;
+
     const { isLoaggedIn, isLoading } = useSelector(state => state.auth);
+
 
     return (
         <header className={Css.app_bar__header}>
             {isLoading &&
-                <Vortex visible={true} height="80" width="80" ariaLabel="vortex-loading" wrapperStyle={{}}
-                        wrapperClass="vortex-wrapper"
-                        colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}/>
+                <div style={{ marginTop: loaderHeight, marginLeft: loaderWidth }}>
+                    <Vortex visible={true} height="80" width="80" ariaLabel="vortex-loading" wrapperStyle={{}}
+                            wrapperClass="vortex-wrapper"
+                            colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}/>
+                </div>
             }
             <div className={Css.app_bar__container}>
                 <nav className={Css.app_bar__nav}>

@@ -12,8 +12,11 @@ export const ContactForm = () =>
   
         const form = event.currentTarget;
 
-        const add_contact = { name: event.currentTarget.elements.name.value, number: event.currentTarget.elements.number.value };
-
+        const add_contact =
+        {
+            name: event.currentTarget.elements.name.value,
+            number: event.currentTarget.elements.number.value
+        };
         dispatch(addContact(add_contact));
 
         form.reset();

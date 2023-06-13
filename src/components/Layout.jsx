@@ -6,9 +6,8 @@ export const Layout = () =>
 {
     return (
         <>
-            {' '}
             <AppBar/>
-            <Suspense fallback={<h1>Loading...</h1>}>
+            <Suspense fallback={null}>
                 <Outlet/>
             </Suspense>
         </>
