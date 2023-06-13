@@ -1,0 +1,103 @@
+.registration
+{
+    margin-left: -20px;
+    padding: 30px 20px;
+    width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(78, 77, 77);
+}
+.registration__label
+{
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.registration__text
+{
+    font-size: 18px;
+    color: rgb(221, 68, 221);
+}
+.registration__input_name
+{
+    margin-left: 35px;
+    width: 300px;
+}
+.registration__input_email
+{
+    margin-left: 39px;
+    width: 300px;
+}
+.registration__input_password
+{
+    margin-left: 10px;
+    width: 297px;
+}
+.registration__input_name, .registration__input_email, .registration__input_password
+{
+    padding: 0 10px;
+    height: 30px;
+    font-size: 16px;
+    border: 2px solid orange;
+}
+.registration__button_block
+{
+    display: flex;
+    justify-content: center;
+}
+.registration__button
+{
+    margin: 20px 0;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    font-size: large;
+    border: 2px solid rgb(60, 60, 231);
+    background-color: rgb(60, 60, 231);
+    color: white;
+}
+    .registration__button:hover
+    {
+        border: 2px solid rgb(95, 196, 95);
+        background-color: rgb(95, 196, 95);
+    }
+@media screen and (max-width: 720px)
+{
+    .registration__text
+    {
+        font-size: 16px;
+    }
+    .registration__input_name, .registration__input_email, .registration__input_password
+    {
+        width: 280px;
+        height: 28px;
+        font-size: 14px;
+    }
+    .registration__button
+    {
+        width: 140px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 480px)
+{
+    .registration__text
+    {
+        font-size: 14px;
+    }
+    .registration__input_name, .registration__input_email, .registration__input_password
+    {
+        width: 52%;
+        height: 25px;
+        font-size: 12px;
+    }
+    .registration__button
+    {
+        width: 120px;
+        height: 30px;
+        font-size: 12px;
+    }
+}

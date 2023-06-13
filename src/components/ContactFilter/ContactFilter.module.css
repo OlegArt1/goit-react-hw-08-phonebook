@@ -1,0 +1,58 @@
+.filter
+{
+    margin-left: -20px;
+    padding: 0 20px 30px 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(78, 77, 77);
+}
+.filter__label
+{
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.filter__span_text
+{
+    font-size: 18px;
+    color: rgb(221, 68, 221);
+}
+.filter__input_name
+{
+    margin-left: 20px;
+    padding-left: 10px;
+    width: 300px;
+    height: 30px;
+    border: 2px solid orange;
+}
+@media screen and (max-width: 720px)
+{
+    .filter__span_text
+    {
+        font-size: 16px;
+    }
+    .filter__input_name
+    {
+        margin-left: 20px;
+        width: 280px;
+        height: 28px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 480px)
+{
+    .filter__span_text
+    {
+        font-size: 14px;
+    }
+    .filter__input_name
+    {
+        margin-left: 15px;
+        width: 200px;
+        height: 25px;
+        font-size: 12px;
+    }
+}

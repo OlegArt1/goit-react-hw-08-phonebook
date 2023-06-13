@@ -1,0 +1,62 @@
+.user_menu
+{
+    display: flex;
+    align-items: cemter;
+    justify-content: center;
+    gap: 5px;
+}
+.user_menu__avatar
+{
+    width: 30px;
+    height: 30px;
+}
+.user_menu__email_block
+{
+    margin-right: 10px;
+    padding-top: 8px;
+    font-style: oblique;
+    color: white;
+}
+.user_menu__button
+{
+    height: auto;
+    cursor: pointer;
+    border: 2px solid rgb(60, 60, 231);
+    background-color: rgb(60, 60, 231);
+    color: white;
+}
+    .user_menu__button:hover
+    {
+        border: 2px solid rgb(95, 196, 95);
+        background-color: rgb(95, 196, 95);
+    }
+.user_menu__button_text
+{
+    font-size: 14px;
+}
+@media screen and (max-width: 720px)
+{
+    .user_menu__email_block
+    {
+        font-size: 16px;
+    }
+    .user_menu__text
+    {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 480px)
+{
+    .user_menu__email_block
+    {
+        font-size: 12px;
+    }
+    .user_menu__text
+    {
+        font-size: 12px;
+    }
+    .user_menu__button_text
+    {
+        font-size: 12px;
+    }
+}

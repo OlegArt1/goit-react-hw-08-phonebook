@@ -1,0 +1,54 @@
+.contact
+{
+    margin: 50px auto;
+}
+.contact__title
+{
+    color: darkcyan;
+}
+.title_phonebook
+{
+    color: rgb(55, 55, 199);
+}
+.title_contact
+{
+    color: rgb(32, 163, 32);
+}
+.title_error
+{
+    color: rgb(236, 54, 54);
+}
+.contact__title, .title_phonebook, .title_contact, .title_error
+{
+    margin: 40px auto;
+    text-align: center;
+}
+.text_error
+{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: darkseagreen;
+}
+@media screen and (max-width: 720px)
+{
+    .contact__title, .title_phonebook, .title_contact, .title_error
+    {
+        font-size: 25px;
+    }
+    .text_error
+    {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 620px)
+{
+    .contact__title, .title_phonebook, .title_contact, .title_error
+    {
+        font-size: 22px;
+    }
+    .text_error
+    {
+        font-size: 12px;
+    }
+}

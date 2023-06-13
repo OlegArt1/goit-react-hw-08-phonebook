@@ -1,0 +1,61 @@
+.app_bar__header
+{
+    margin-top: 20px;
+    height: 50px;
+}
+.app_bar__container
+{
+    width: 100%;
+}
+.app_bar__nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.app_bar__link
+{
+    padding: 0 22px;
+    text-decoration: none;
+}
+.app_bar__text
+{
+    font-size: 18px;
+    transition: transform 250px cubic-bezier(0.4, 0, 0.2, 1) 250px;
+    color: white;
+}
+    .app_bar__text:hover, .app_bar__text:focus
+    {
+        transform: scale(1.05);
+        color: green;
+    }
+@media screen and (max-width: 720px)
+{
+    .app_bar__header
+    {
+        height: 40px;
+    }
+    .app_bar__link
+    {
+        padding: 0 20px;
+    }
+    .app_bar__text
+    {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 480px)
+{
+    .app_bar__header
+    {
+        height: 30px;
+    }
+    .app_bar__link
+    {
+        padding: 0 18px;
+    }
+    .app_bar__text
+    {
+        font-size: 12px;
+    }
+}

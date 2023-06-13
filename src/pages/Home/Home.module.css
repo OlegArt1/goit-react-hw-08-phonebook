@@ -1,0 +1,28 @@
+.home__container
+{
+    min-height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.home__title
+{
+    font-weight: 500;
+    font-size: 48px;
+    text-align: center;
+}
+@media screen and (max-width: 720px)
+{
+    .home__title
+    {
+        font-size: 38px;
+    }
+}
+@media screen and (max-width: 480px)
+{
+    .home__title
+    {
+        font-size: 28px;
+    }
+}

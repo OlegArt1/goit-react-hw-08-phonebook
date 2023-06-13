@@ -1,0 +1,124 @@
+.authorization
+{
+    margin-left: -20px;
+    padding: 30px 20px;
+    width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(78, 77, 77);
+}
+.authorization__label
+{
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.authorization__text
+{
+    font-size: 18px;
+    color: rgb(221, 68, 221);
+}
+.authorization__input_login
+{
+    margin-left: 16px;
+    width: 300px;
+}
+.authorization__input_password
+{
+    margin-left: 15px;
+    width: 270px;
+}
+.authorization__input_login, .authorization__input_password
+{
+    padding-left: 10px;
+    height: 30px;
+    font-size: 16px;
+    border: 2px solid orange;
+}
+.authorization__button_block
+{
+    display: flex;
+    justify-content: center;
+}
+.authorization__button
+{
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    font-size: large;
+    border: 2px solid rgb(60, 60, 231);
+    background-color: rgb(60, 60, 231);
+    color: white;
+}
+    .authorization__button:hover
+    {
+        border: 2px solid rgb(95, 196, 95);
+        background-color: rgb(95, 196, 95);
+    }
+.authorization__link_block
+{
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+.authorization__link_text
+{
+    color: white;
+}
+@media screen and (max-width: 720px)
+{
+    .authorization__text
+    {
+        font-size: 16px;
+    }
+    .authorization__input_login
+    {
+        margin-left: 45px;
+    }
+    .authorization__input_login, .authorization__input_password
+    {
+        width: 280px;
+        height: 28px;
+        font-size: 14px;
+    }
+    .authorization__button
+    {
+        width: 140px;
+        height: 35px;
+        font-size: 14px;
+    }
+    .authorization__link_text
+    {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 480px)
+{
+    .authorization__text
+    {
+        font-size: 14px;
+    }
+    .authorization__input_login
+    {
+        margin-left: 40px;
+    }
+    .authorization__input_login, .authorization__input_password
+    {
+        width: 50%;
+        height: 25px;
+        font-size: 12px;
+    }
+    .authorization__button
+    {
+        width: 120px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .authorization__link_text
+    {
+        font-size: 12px;
+    }
+}
