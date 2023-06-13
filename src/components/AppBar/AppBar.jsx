@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { UserMenu } from "components/UserMenu/UserMenu";
 import { Spin } from "antd";
 import styled from "styled-components";
@@ -21,13 +21,13 @@ export const AppBar = () =>
             <div className={Css.app_bar__container}>
                 <nav className={Css.app_bar__nav}>
                     <div>
-                        <Link className={Css.app_bar__link} to="/" style={{ paddingRight: 20 }}>
+                        <NavLink className={Css.app_bar__link} to="/" style={{ paddingRight: 20 }}>
                             <span className={Css.app_bar__text}>Home</span>
-                        </Link>
+                        </NavLink>
                         {isLoaggedIn &&
-                            <Link className={Css.app_bar__link} to="/contacts" style={{ paddingLeft: 0 }}>
+                            <NavLink className={Css.app_bar__link} to="/contacts" style={{ paddingLeft: 0 }}>
                                 <span className={Css.app_bar__text}>Contacts</span>
-                            </Link>
+                            </NavLink>
                         }
                     </div>
                     <div>
