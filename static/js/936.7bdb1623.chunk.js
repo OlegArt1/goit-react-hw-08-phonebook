@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[936],{4936:function(e,a,n){n.r(a),n.d(a,{default:function(){return t}});var r="Home_home__container__5DMcK",c="Home_home__title__3OeFZ",s=n(3329);function t(){return(0,s.jsx)("div",{className:r,children:(0,s.jsxs)("h1",{className:c,children:[(0,s.jsxs)("span",{children:["Task manager welcome page"," "]}),(0,s.jsx)("span",{role:"img","aria-label":"Greeting icon",children:"\ud83d\udc81\u200d\u2640\ufe0f"})]})})}}}]);
+//# sourceMappingURL=936.7bdb1623.chunk.js.map
