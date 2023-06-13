@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logIn } from "Redux/auth/operations";
 import Css from "./Authorization.module.css";
 
 export default function Login()
 {
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
+
+    const location = useLocation();
 
     const handleSubmit = (evt) =>
     {
@@ -36,7 +38,11 @@ export default function Login()
             </p>
             <br/><br/>
             <p className={Css.authorization__link_block}>
-                <span className={Css.authorization__link_text}>Log in or <Link style={{ color: 'lightblue' }} to="/register">register new</Link>!</span>
+                <span className={Css.authorization__link_text}>Log in or 
+                <Link style={{ color: 'lightblue' }} to="/register" state={{ from: location.state?.from }}>
+                    register new
+                </Link>
+                !</span>
             </p>
         </form>
     );
