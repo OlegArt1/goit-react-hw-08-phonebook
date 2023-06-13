@@ -39,18 +39,6 @@ const contactsSlise = createSlice({
                 state.error = null;
             })
             .addCase(addContact.rejected, handleRejected)
-        /*
-            .addCase(redactContact.pending, handlePending)
-            .addCase(redactContact.fulfilled, (state, action) =>
-            {
-                const index = state.items.findIndex(task => task.id === action.payload.id);
-                state.items.splice(index, 1);
-                state.items.unshift(action.payload);
-                state.isLoading = false;
-                state.error = null;
-            })
-            .addCase(redactContact.rejected, handleRejected)
-        */
             .addCase(deleteContact.pending, handlePending)
             .addCase(deleteContact.fulfilled, (state, action) =>
             {

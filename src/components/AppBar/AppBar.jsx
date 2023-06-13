@@ -1,23 +1,20 @@
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { UserMenu } from "components/UserMenu/UserMenu";
-import { Spin } from "antd";
-import styled from "styled-components";
+import { Vortex } from "react-loader-spinner";
 import Css from "./AppBar.module.css";
 
-export const Spiner = styled(Spin)`
-    position: absolute;
-    top: 25px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-`;
 export const AppBar = () =>
 {
-    const { isLoaggedIn, isLoading } = useSelector(state => state.auth); // це для того щоб не було редіректу на логін поки не завантажиться токен
+    const { isLoaggedIn, isLoading } = useSelector(state => state.auth);
 
     return (
         <header className={Css.app_bar__header}>
-            {isLoading && <Spiner/>}
+            {isLoading &&
+                <Vortex visible={true} height="80" width="80" ariaLabel="vortex-loading" wrapperStyle={{}}
+                        wrapperClass="vortex-wrapper"
+                        colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}/>
+            }
             <div className={Css.app_bar__container}>
                 <nav className={Css.app_bar__nav}>
                     <div>

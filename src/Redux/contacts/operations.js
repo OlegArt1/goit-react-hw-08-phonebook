@@ -21,7 +21,7 @@ export const addContact = createAsyncThunk("contacts/addContact", async (subscri
     try
     {
         const response = await axios.post(`/contacts`, subscriber);
-  console.log(`Response ${response.data}   ${subscriber}`);
+ 
         return response.data;
     }
     catch (e)
@@ -29,24 +29,6 @@ export const addContact = createAsyncThunk("contacts/addContact", async (subscri
         return rejectWithValue(e.message);
     }
 });
-/*
-    export const redactContact = createAsyncThunk("contacts/redactContact", async (data, { rejectWithValue }) =>
-    {
-        try
-        {
-            const response = await axios.patch(`/contacts/${data.id}`,
-            {
-                name: data.name,
-                number: data.number,
-            });
-            return response.data;
-        }
-        catch (e)
-        {
-            return rejectWithValue(e.message);
-        }
-    });
-*/
 export const deleteContact = createAsyncThunk("contacts/deleteContact", async (id, { rejectWithValue }) =>
 {
     try

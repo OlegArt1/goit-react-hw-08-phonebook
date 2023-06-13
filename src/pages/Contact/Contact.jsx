@@ -23,7 +23,11 @@ export default function ContactList()
             <h1 className={Css.title_phonebook}>Phonebook</h1>
             <div>
                 <ContactForm/>
-                {contacts.length < 1 ? <h1>Add your first contact</h1> : <ContactFilter/>}
+                {contacts.length < 1 ?
+                    <h1 className={Css.contact__title}>Add your first contact</h1>
+                    :
+                    <ContactFilter/>
+                }
             </div>
             <h1 className={Css.title_contact}>Contacts</h1>
             <ContactListItem/>
