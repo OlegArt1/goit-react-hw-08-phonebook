@@ -6,6 +6,8 @@ import { Layout } from "./Layout";
 import { GlobalStyle } from "./GlobalStyle";
 import { PrivateRoute } from "./PrivateRoute";
 import { RestrictedRoute } from "./RestrictedRoute";
+import { useAuth } from "hooks";
+import { selectAuth } from "Redux/auth/selectors";
 import { refreshUser } from "Redux/auth/operations";
 
 const Home = lazy(() => import("../pages/Home/Home"));
@@ -23,7 +25,11 @@ export const App = () =>
   
     }, [dispatch]);
 
-    const { isRefreshing } = useSelector(state => state.auth);
+    const { isRefreshing } = useSelector(selectAuth);
+
+    const is_refreshing = useAuth();
+    
+    console.log("\nData user: ", is_refreshing);
 
     const loaderHeight = (window.innerHeight - 80) / 2;
     const loaderWidth = (window.innerWidth - 80) / 2;
@@ -46,4 +52,4 @@ export const App = () =>
         <Vortex visible={true} height="80" width="80" ariaLabel="vortex-loading" wrapperStyle={{}}
                 wrapperClass="vortex-wrapper" colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}/>;
     </div>
-}
+};
