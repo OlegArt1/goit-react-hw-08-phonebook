@@ -38,7 +38,7 @@ export const AppBar = () =>
                             <UserMenu/>
                             :
                             <>
-                                <NavLink className={Css.app_bar__link} to="/register">
+                                <NavLink className={Css.app_bar__link} to="/register" onLoad={window.location.reload(false)}>
                                     <span className={Css.app_bar__text}>Register</span>
                                 </NavLink>
                                 <NavLink className={Css.app_bar__link} to="/login">
