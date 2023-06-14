@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { useAuth } from "hooks";
 import { logIn } from "Redux/auth/operations";
 import Css from "./Authorization.module.css";
 
@@ -9,6 +10,10 @@ export default function Login()
 
     const location = useLocation();
 
+    const authorization = useAuth();
+
+    console.log("\nAuthorization ", authorization);
+    
     const handleSubmit = (evt) =>
     {
         evt.preventDefault();

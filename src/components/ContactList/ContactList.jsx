@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteContact, fetchContacts } from "Redux/contacts/operations";
+import { selectContacts, selectFilters } from "Redux/contacts/selectors";
 import Css from "./ContactList.module.css";
 
 export const ContactListItem = () =>
@@ -13,16 +14,16 @@ export const ContactListItem = () =>
 
     }, [dispatch]);
 
-    const contacts = useSelector(state => state.contacts.items);
-    const filterData = useSelector(state => state.filter).toLowerCase(); 
+    const contacts = useSelector(selectContacts);
+    const filters = useSelector(selectFilters).toLowerCase();
 
-    const visibleContacts = contacts.filter(subscriber =>
-        subscriber.name.toLowerCase().includes(filterData)
+    const data_contacts = contacts.filter(subscriber =>
+        subscriber.name.toLowerCase().includes(filters)
     );
     return (
         <>
             <ul className={Css.contact__list}>
-                {visibleContacts.map(({ id, name, number }) =>
+                {data_contacts.map(({ id, name, number }) =>
                 (
                     <li className={Css.contact__item} key={id}>
                         <div className={Css.contact__block}>

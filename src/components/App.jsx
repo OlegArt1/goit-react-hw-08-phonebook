@@ -6,13 +6,12 @@ import { Layout } from "./Layout";
 import { GlobalStyle } from "./GlobalStyle";
 import { PrivateRoute } from "./PrivateRoute";
 import { RestrictedRoute } from "./RestrictedRoute";
-import { Register } from "pages/Registration/Registration";
 import { refreshUser } from "Redux/auth/operations";
 
-//const Register = lazy(() => import("../pages/Registration/Registration"));
 const Home = lazy(() => import("../pages/Home/Home"));
 const Login = lazy(() => import("../pages/Authorization/Authorization"));
 const ContactList = lazy(() => import("../pages/Contact/Contact"));
+const Register = lazy(() => import("../pages/Registration/Registration"));
 
 export const App = () =>
 {
@@ -36,7 +35,7 @@ export const App = () =>
                 <Route index element={<Home/>}/>
                 <Route path="/contacts" element= {<PrivateRoute redirectTo="/login" component={<ContactList/>}/>}/>
                 <Route path="/login" element= {<RestrictedRoute redirectTo="/contacts" component={<Login/>}/>}/>
-                <Route path="register" element= {<Register/>}/>
+                <Route path="/register" element= {<RestrictedRoute redirectTo="/contacts" component={<Register/>}/>}/>
                 <Route path="*" element={<Navigate to="/"/>}/>
             </Route>
         </Routes>

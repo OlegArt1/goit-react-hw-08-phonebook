@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { ContactForm } from "components/ContactForm/ContactForm";
 import { ContactFilter } from "components/ContactFilter/ContactFilter";
 import { ContactListItem } from "components/ContactList/ContactList";
+import { selectContacts } from "Redux/contacts/selectors";
 import { fetchContacts } from "Redux/contacts/operations";
 import Css from "./Contact.module.css";
 
@@ -16,7 +17,7 @@ export default function ContactList()
 
     }, [dispatch]);
 
-    const contacts = useSelector(state => state.contacts.items);
+    const contacts = useSelector(selectContacts);
 
     return (
         <div className={Css.contact}>

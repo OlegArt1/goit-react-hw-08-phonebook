@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
-import { logOut } from "Redux/auth/operations";
 import { Avatar } from "antd";
+import { selectUserAuth } from "Redux/auth/selectors";
+import { logOut } from "Redux/auth/operations";
 import Css from "./UserMenu.module.css";
 
 export const UserMenu = () =>
 {
-    const { email } = useSelector(state => state.auth.user);
+    const { email } = useSelector(selectUserAuth);
     
     const dispatch = useDispatch();
 

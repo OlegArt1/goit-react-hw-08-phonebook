@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { UserMenu } from "components/UserMenu/UserMenu";
 import { Vortex } from "react-loader-spinner";
+import { UserMenu } from "components/UserMenu/UserMenu";
+import { selectAuth } from "Redux/auth/selectors";
 import Css from "./AppBar.module.css";
 
 export const AppBar = () =>
@@ -9,7 +10,7 @@ export const AppBar = () =>
     const loaderHeight = (window.innerHeight - 80) / 2;
     const loaderWidth = (window.innerWidth - 80) / 2;
 
-    const { isLoaggedIn, isLoading } = useSelector(state => state.auth);
+    const { isLoaggedIn, isLoading } = useSelector(selectAuth);
 
     return (
         <header className={Css.app_bar__header}>
