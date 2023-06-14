@@ -35,7 +35,7 @@ export const App = () =>
                 <Route index element={<Home/>}/>
                 <Route path="/contacts" element= {<PrivateRoute redirectTo="/login" component={<ContactList/>}/>}/>
                 <Route path="/login" element= {<RestrictedRoute redirectTo="/contacts" component={<Login/>}/>}/>
-                <Route path="/register" element= {<RestrictedRoute redirectTo="/contacts" component={<Register/>}/>}/>
+                <Route path="/register" element= {<Register/>}/>
                 <Route path="*" element={<Navigate to="/"/>}/>
             </Route>
         </Routes>
@@ -46,4 +46,4 @@ export const App = () =>
         <Vortex visible={true} height="80" width="80" ariaLabel="vortex-loading" wrapperStyle={{}}
                 wrapperClass="vortex-wrapper" colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}/>;
     </div>
-};
+}
