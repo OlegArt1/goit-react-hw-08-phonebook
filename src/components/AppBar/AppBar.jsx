@@ -11,7 +11,6 @@ export const AppBar = () =>
 
     const { isLoaggedIn, isLoading } = useSelector(state => state.auth);
 
-
     return (
         <header className={Css.app_bar__header}>
             {isLoading &&
@@ -38,7 +37,7 @@ export const AppBar = () =>
                             <UserMenu/>
                             :
                             <>
-                                <NavLink className={Css.app_bar__link} to="/register">
+                                <NavLink className={Css.app_bar__link} to="/register" onClick={()=>{for(let i = 0; i<= 1;i+=1){window.location.reload();break;}}}>
                                     <span className={Css.app_bar__text}>Register</span>
                                 </NavLink>
                                 <NavLink className={Css.app_bar__link} to="/login">
