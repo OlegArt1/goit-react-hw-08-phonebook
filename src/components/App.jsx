@@ -6,9 +6,10 @@ import { Layout } from "./Layout";
 import { GlobalStyle } from "./GlobalStyle";
 import { PrivateRoute } from "./PrivateRoute";
 import { RestrictedRoute } from "./RestrictedRoute";
+import { Register } from "pages/Registration/Registration";
 import { refreshUser } from "Redux/auth/operations";
 
-const Register = lazy(() => import("../pages/Registration/Registration"));
+//const Register = lazy(() => import("../pages/Registration/Registration"));
 const Home = lazy(() => import("../pages/Home/Home"));
 const Login = lazy(() => import("../pages/Authorization/Authorization"));
 const ContactList = lazy(() => import("../pages/Contact/Contact"));

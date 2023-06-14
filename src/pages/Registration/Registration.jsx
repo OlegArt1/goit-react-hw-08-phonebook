@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { registration } from "Redux/auth/operations";
 import Css from "./Registration.module.css";
 
-export default function Register()
+export const Register = () =>
 {
   const dispatch = useDispatch();
 
