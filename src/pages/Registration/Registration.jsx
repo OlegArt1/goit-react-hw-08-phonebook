@@ -19,8 +19,17 @@ export default function Register()
         }));
         form.reset();
     };
+    const handleLoad = () =>
+    {
+        for (let i = 0; i <= 1; i += 1)
+        {
+            window.location.reload(false);
+
+            break;
+        }
+    };
     return (
-        <form className={Css.registration} onSubmit={handleSubmit} autoComplete="off">
+        <form className={Css.registration} onLoad={window.location.reload(false)} onSubmit={handleSubmit} autoComplete="off">
             <label className={Css.registration__label}>
                 <span className={Css.registration__text}>Name</span>
                 <input className={Css.registration__input_name} type="text" name="name"
